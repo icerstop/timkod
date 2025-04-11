@@ -226,7 +226,7 @@ def main():
         next_chars = list(probability_model[start_seq].keys())
         next_probs = list(probability_model[start_seq].values())
         next_char = random.choices(next_chars, weights=next_probs)[0]
-        text_5th += next_char
+        text_5th_prob += next_char
         start_seq = start_seq[1:] + next_char
 
     print(f"\nWygenerowany tekst (fragment z 'probability' na początku): {text_5th_prob[:100]}")
